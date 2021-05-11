@@ -16,11 +16,5 @@ class Micropost extends Model
         return $this->belongsTo(User::class);
     }
     
-    /**
-     * このユーザに関係するモデルの件数をロードする。
-     */
-    public function loadRelationshipCounts()
-    {
-        $this->loadCount('microposts');
-    }
+    
 }
