@@ -48,7 +48,7 @@ class User extends Authenticatable
      */
     public function loadRelationshipCounts()//ユーザが所有するmicropostの件数を取得
     {
-        $this->loadCount('microposts');
+        $this->loadCount(['microposts', 'followings', 'followers']);
     }
     
     /**
