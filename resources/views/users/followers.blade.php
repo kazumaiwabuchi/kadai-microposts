@@ -1,4 +1,4 @@
-@extends('layouts.app')//共通レイアウト継承
+@extends('layouts.app'){{--共通レイアウト継承--}}
 
 @section('content')
     <div class="row">
@@ -10,7 +10,7 @@
             {{-- タブ --}}
             @include('users.navtabs')
             {{-- ユーザ一覧 --}}
-            @include('users.users')//フォロワー一覧が渡され、一覧表示される
+            @include('users.users'){{--フォロワー一覧が渡され、一覧表示される--}}
         </div>
     </div>
 @endsection
