@@ -4,13 +4,13 @@
     @if (Auth::user()->is_following($user->id))
         {{-- アンフォローボタンのフォーム --}}
         {!! Form::open(['route' => ['user.unfollow', $user->id], 'method' => 'delete']) !!}
-            {!! Form::submit('Unfollow', ['class' => "btn btn-danger btn-block"]) !!}
+            {!! Form::submit('フォローを取り消し', ['class' => "btn btn-danger btn-block"]) !!}
         {!! Form::close() !!}
     {{--未フォローなら、フォローボタン表示--}}
     @else
         {{-- フォローボタンのフォーム --}}
         {!! Form::open(['route' => ['user.follow', $user->id]]) !!}
-            {!! Form::submit('Follow', ['class' => "btn btn-primary btn-block"]) !!}
+            {!! Form::submit('フォローする', ['class' => "btn btn-primary btn-block"]) !!}
         {!! Form::close() !!}
     @endif
 @endif
