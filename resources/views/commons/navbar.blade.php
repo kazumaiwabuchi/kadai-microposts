@@ -19,7 +19,7 @@
                             {{-- ユーザ詳細ページへのリンク --}}
                             <li class="dropdown-item">{!! link_to_route('users.show', 'My profile', ['user' => Auth::id()]) !!}</li>
                             {{-- お気に入り一覧ページへのリンク --}}
-                            <li class="dropdown-item">{!! link_to_route('users.favorites', 'Favorites', ['user' => Auth::id()]) !!}</li>
+                            <li class="dropdown-item">{!! link_to_route('users.favorites', 'Favorites', ['id' => Auth::id()]) !!}</li>
                             
                             <li class="dropdown-divider"></li>　{{--分割線の表示--}}
                             {{-- ログアウトへのリンク --}}
